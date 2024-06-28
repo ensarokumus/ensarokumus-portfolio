@@ -15,9 +15,18 @@ const config: Config = {
       },
       animation: {
         "spin-slow": "spin 5s linear infinite",
+        "move-bg": "move-bg 30s ease-in-out infinite",
+      },
+      keyframes: {
+        "move-bg": {
+          "0%": { backgroundPosition: "0 0" },
+          "50%": { backgroundPosition: "0 10rem" },
+          "100%": { backgroundPosition: "0 0" },
+        },
       },
     },
   },
   plugins: [],
 };
+
 export default config;
