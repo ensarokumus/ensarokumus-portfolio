@@ -25,7 +25,7 @@ const Letter: React.FC<LetterProps> = ({
     transition={{
       duration,
       delay,
-      ease: [0, 0.71, 0.2, 1.01],
+      ease: [0, 0.7, 0.2, 1],
     }}
     className={className}
   >
@@ -54,8 +54,8 @@ const About: React.FC = () => {
               <Letter
                 key={index}
                 letter={letter}
-                duration={0.1 * (index + 11)}
-                delay={0.1 * (index + 11)}
+                duration={0.1 * (index + 6)}
+                delay={0.1 * (index + 6)}
                 className="text-gray-600"
               />
             ))}
@@ -65,77 +65,52 @@ const About: React.FC = () => {
               <Letter
                 key={index}
                 letter={letter}
-                duration={0.1 * (index + 13)}
-                delay={0.1 * (index + 13)}
+                duration={0.1 * (index + 11)}
+                delay={0.1 * (index + 11)}
                 className="text-gray-400"
               />
             ))}
             <Letter
               letter="."
-              duration={2.2}
-              delay={2.2}
+              duration={2}
+              delay={2}
               className="text-blue-400"
             />
           </span>
         </h1>
 
-        <div className="flex mt-6 items-center justify-center gap-5 flex-wrap">
-          <motion.button
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 0.8,
-              delay: 2.2,
-              ease: [0, 0.71, 0.2, 1.01],
-            }}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.8,
+            delay: 2,
+            ease: [0, 0.7, 0.2, 1],
+          }}
+          className="flex mt-6 items-center justify-center gap-5 flex-wrap"
+        >
+          <button
             className="px-4 py-2 border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem] text-sm text-gray-600 rounded-full hover:bg-gray-100 hover:text-gray-800 transition-colors duration-300"
             // TODO: add onClick to scroll to contact section
           >
             &lt;Contact Me /&gt;
-          </motion.button>
+          </button>
           <Link href="/Resume_EnsarOkumus_Jun24.pdf" download target="_blank">
-            <motion.button
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.8,
-                delay: 2.2,
-                ease: [0, 0.71, 0.2, 1.01],
-              }}
-              className="flex items-center gap-3 px-4 py-2 border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem] text-sm text-gray-600 rounded-full hover:bg-gray-100 hover:text-gray-800 transition-colors duration-300"
-            >
+            <button className="flex items-center gap-3 px-4 py-2 border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem] text-sm text-gray-600 rounded-full hover:bg-gray-100 hover:text-gray-800 transition-colors duration-300">
               Download CV <FaDownload className="h-5 w-5" />
-            </motion.button>
+            </button>
           </Link>
           <Link href="https://github.com/ensarokumus" target="_blank">
-            <motion.button
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.8,
-                delay: 2.2,
-                ease: [0, 0.71, 0.2, 1.01],
-              }}
-              className="px-2 py-2 border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem] text-sm text-gray-600 rounded-full hover:bg-gray-100 hover:text-gray-800 transition-colors duration-300"
-            >
+            <button className="px-2 py-2 border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem] text-sm text-gray-600 rounded-full hover:bg-gray-100 hover:text-gray-800 transition-colors duration-300">
               <FaGithub className="h-5 w-5" />
-            </motion.button>
+            </button>
           </Link>
           <Link href="https://www.linkedin.com/in/ensarokumus/" target="_blank">
-            <motion.button
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.8,
-                delay: 2.2,
-                ease: [0, 0.71, 0.2, 1.01],
-              }}
-              className="px-2 py-2 border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem] text-sm text-gray-600 rounded-full hover:bg-gray-100 hover:text-gray-800 transition-colors duration-300"
-            >
+            <button className="px-2 py-2 border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem] text-sm text-gray-600 rounded-full hover:bg-gray-100 hover:text-gray-800 transition-colors duration-300">
               <FaLinkedin className="h-5 w-5" />
-            </motion.button>
+            </button>
           </Link>
-        </div>
+        </motion.div>
       </div>
 
       <motion.div
@@ -144,8 +119,8 @@ const About: React.FC = () => {
         animate={{ opacity: 1, x: 0, scale: 1 }}
         transition={{
           duration: 0.8,
-          delay: 2.2,
-          ease: [0, 0.71, 0.2, 1.01],
+          delay: 2,
+          ease: [0, 0.7, 0.2, 1],
         }}
       >
         <div className="relative">
