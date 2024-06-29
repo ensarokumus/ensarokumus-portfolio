@@ -1,6 +1,7 @@
 import Hero from "@/components/organisms/Hero";
 import Divider from "@/components/atoms/Divider";
 import About from "@/components/organisms/About";
+import Projects from "@/components/organisms/Projects";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <Divider />
       <About />
+      <Projects />
     </main>
   );
 }
