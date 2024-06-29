@@ -1,3 +1,7 @@
+import projectTldrImg from "@/public/project-tldr.png";
+import projectTrustmileImg from "@/public/project-trustmile.png";
+import projectBoviImg from "@/public/project-bovi.png";
+
 export const links = [
   {
     name: "Home",
@@ -80,7 +84,7 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "TL:DR",
+    title: "TL;DR",
     description:
       "Comprehensive SaaS solution built from the ground up that incorporates chat function with PDF files by utilising the OpenAI's GPT-3.5 Turbo model. It's the perfect tool for people who thinks their PDF is too long; they can't read it!",
     tags: [
@@ -96,13 +100,14 @@ export const projectsData = [
       "Stripe",
       "Kinde",
     ],
-    imageUrl: "#",
+    imageUrl: projectTldrImg,
+    projectColor: "orange",
     gitHubRepo: "https://github.com/ensarokumus/tldr-app",
     liveDemo: "https://tldr-neon.vercel.app/",
     website: "#",
   },
   {
-    title: "Trustmile by CoreForm",
+    title: "Trustmile",
     description:
       "Trustmile is a web and native mobile app that aims to revolutionise Last-Mile Logistics with real-time delivery tracking and data-driven decision-making. Empowering administrators and dispatch staff to optimise operations, enhance efficiency and customer communication.  I'm working on the admin web app as a frontend developer alongside the development team. The web app and native apps are currently in use for a selected customer base with a full-release schedule until 2024 Q4.",
     tags: [
@@ -116,13 +121,14 @@ export const projectsData = [
       "Emotion",
       "Docker",
     ],
-    imageUrl: "#",
+    imageUrl: projectTrustmileImg,
+    projectColor: "blue",
     gitHubRepo: "#",
     liveDemo: "#",
     website: "https://www.trustmile.co/",
   },
   {
-    title: "Bovi Web App by Bovi Oy",
+    title: "Bovi Web App",
     description:
       "Bovi is a Finnish startup that aims to build a public coupon management web app. I'm working as a frontend developer with the sole responsibility of the frontend alongside a backend developer. Currently working on the user and merchant dashboards with role-based access control for a seamless user experience. The app will be ready for public use in second half of 2024.",
     tags: [
@@ -135,7 +141,8 @@ export const projectsData = [
       "Zod",
       "Docker",
     ],
-    imageUrl: "#",
+    imageUrl: projectBoviImg,
+    projectColor: "green",
     gitHubRepo: "#",
     liveDemo: "#",
     website: "https://bovi.fi/en/",
