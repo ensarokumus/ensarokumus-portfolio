@@ -1,77 +1,18 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { FaDownload, FaGithub, FaLinkedin } from "react-icons/fa6";
-
-interface LetterProps {
-  letter: string;
-  duration: number;
-  delay: number;
-  className: string;
-}
-
-const Letter = ({ letter, duration, delay, className }: LetterProps) => (
-  <motion.span
-    initial={{ opacity: 0, scale: 0.5 }}
-    animate={{ opacity: 1, scale: 1 }}
-    transition={{
-      duration,
-      delay,
-      ease: [0, 0.7, 0.2, 1],
-    }}
-    className={className}
-  >
-    {letter}
-  </motion.span>
-);
+import TitleAnimation from "../molecules/TitleAnimation";
 
 export default function Hero() {
   return (
     <section className="flex flex-col sm:flex-row justify-center items-center gap-5 lg:gap-40 lg:px-16 pt-12 sm:pt-24 mb-28 sm:mb-0">
       <div className="relative flex flex-col items-center lg:items-start">
         <h1 className="text-6xl sm:text-8xl font-bold max-w-lg text-center lg:text-left text-gray-200">
-          <span className="block">
-            {"ensar".split("").map((letter, index) => (
-              <Letter
-                key={index}
-                letter={letter}
-                duration={0.1 * (index + 1)}
-                delay={0.1 * (index + 1)}
-                className="text-gray-700"
-              />
-            ))}
-          </span>
-          <span className="block mt-2">
-            {"okumus".split("").map((letter, index) => (
-              <Letter
-                key={index}
-                letter={letter}
-                duration={0.1 * (index + 6)}
-                delay={0.1 * (index + 6)}
-                className="text-gray-600"
-              />
-            ))}
-          </span>
-          <span className="block mt-2">
-            {"portfolio".split("").map((letter, index) => (
-              <Letter
-                key={index}
-                letter={letter}
-                duration={0.1 * (index + 11)}
-                delay={0.1 * (index + 11)}
-                className="text-gray-400"
-              />
-            ))}
-            <Letter
-              letter="."
-              duration={2}
-              delay={2}
-              className="text-blue-400"
-            />
-          </span>
+          <TitleAnimation />
         </h1>
 
         <motion.div
