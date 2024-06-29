@@ -1,6 +1,6 @@
-import Hero from "@/components/Hero";
-import Divider from "@/components/Divider";
-import About from "@/components/About";
+import Hero from "@/components/organisms/Hero";
+import Divider from "@/components/atoms/Divider";
+import About from "@/components/organisms/About";
 
 export default function Home() {
   return (

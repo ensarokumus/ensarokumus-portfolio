@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import SectionHeading from "./SectionHeader";
+import SectionHeading from "../atoms/SectionHeader";
 import { motion } from "framer-motion";
 
 export default function About() {
