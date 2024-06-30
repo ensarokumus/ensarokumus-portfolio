@@ -17,8 +17,8 @@ const Project = ({
   website,
 }: ProjectProps) => {
   return (
-    <section className="bg-gray-100 flex flex-col sm:flex-row gap-2 rounded-lg mb-20 hover:bg-gray-200 transition">
-      <div className="flex flex-col gap-4 p-4">
+    <section className="flex flex-col max-w-[70rem] lg:flex-row lg:min-h-[30rem] mx-2 md:mx-24 mb-16 bg-gray-100 hover:bg-gray-200 transition">
+      <div className="flex flex-col justify-between rounded-lg p-4 min-h-[24rem] lg:max-w-[22rem] border border-gray-300 border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem]">
         <ul className="flex gap-2 flex-wrap">
           {tags.map((tag, index) => (
             <li
@@ -31,7 +31,7 @@ const Project = ({
         </ul>
         <h3
           className={clsx(
-            "my-6 text-4xl font-bold sm:text-6xl bg-gradient-to-r w-fit bg-clip-text text-transparent drop-shadow-sm",
+            "text-4xl font-bold sm:text-6xl bg-gradient-to-r w-fit bg-clip-text text-transparent drop-shadow-sm",
 
             {
               "from-blue-600 to-blue-400": projectColor === "blue",
@@ -43,7 +43,7 @@ const Project = ({
           {title}
         </h3>
         <p className="text-sm text-gray-700 text-pretty">{description}</p>
-        <div className="flex px-10 mt-10 justify-around">
+        <div className="flex justify-around items-end">
           {gitHubRepo !== "#" && (
             <Link
               href={gitHubRepo}
@@ -77,7 +77,7 @@ const Project = ({
         src={imageUrl}
         alt="screenshot of the web app"
         quality={95}
-        className="rounded-lg"
+        className="rounded-lg shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem]"
       />
     </section>
   );
