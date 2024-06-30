@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} bg-gray-50 text-gray-950 pt-16 sm:pt-30`}
+        className={`${inter.className} bg-gray-50 text-gray-950 pt-16 sm:pt-30 relative scroll-smooth`}
       >
         <div
           aria-hidden
