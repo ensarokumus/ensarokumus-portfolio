@@ -1,10 +1,45 @@
+"use client";
+
 import { projectsData } from "@/lib/data";
 import clsx from "clsx";
 import Link from "next/link";
 import { FaCirclePlay, FaGithub, FaLink } from "react-icons/fa6";
 import ProjectImage from "../atoms/ProjectImage";
+import { motion, Variants } from "framer-motion";
 
 type ProjectProps = (typeof projectsData)[number];
+
+const projectDetailsVariants: Variants = {
+  offscreen: {
+    translateX: -100,
+    opacity: 0,
+  },
+  onscreen: {
+    translateX: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.2,
+    },
+  },
+};
+
+const projectImageVariants: Variants = {
+  offscreen: {
+    translateX: 100,
+    opacity: 0,
+  },
+  onscreen: {
+    translateX: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.2,
+    },
+  },
+};
 
 const Project = ({
   title,
@@ -17,8 +52,16 @@ const Project = ({
   website,
 }: ProjectProps) => {
   return (
-    <section className="group flex flex-col max-w-[70rem] lg:flex-row lg:min-h-[30rem] mx-2 md:mx-24 mb-16 transition">
-      <div className="flex flex-col justify-between rounded-lg p-4 min-h-[24rem] lg:max-w-[22rem] bg-gray-100 border border-gray-300 border-opacity-40 shadow-xl shadow-black/[0.1] group-hover:shadow-black/[0.2] transition backdrop-blur-[0.5rem]">
+    <motion.section
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.2 }}
+      className="group flex flex-col max-w-[70rem] lg:flex-row lg:min-h-[30rem] mx-2 md:mx-24 mb-16 transition"
+    >
+      <motion.div
+        variants={projectDetailsVariants}
+        className="flex flex-col justify-between rounded-lg p-4 min-h-[24rem] lg:max-w-[22rem] bg-gray-100 border border-gray-300 border-opacity-40 shadow-xl shadow-black/[0.1] group-hover:shadow-black/[0.2] transition backdrop-blur-[0.5rem]"
+      >
         <ul className="flex gap-2 flex-wrap">
           {tags.map((tag, index) => (
             <li
@@ -72,12 +115,14 @@ const Project = ({
             </Link>
           )}
         </div>
-      </div>
-      <ProjectImage
-        imageUrl={imageUrl}
+      </motion.div>
+      <motion.div
+        variants={projectImageVariants}
         className="flex items-center justify-center px-10 py-5 rounded-lg border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] group-hover:shadow-black/[0.2] transition backdrop-blur-[0.5rem]"
-      />
-    </section>
+      >
+        <ProjectImage imageUrl={imageUrl} />
+      </motion.div>
+    </motion.section>
   );
 };
 export default Project;

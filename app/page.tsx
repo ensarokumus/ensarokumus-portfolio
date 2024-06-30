@@ -5,7 +5,7 @@ import Projects from "@/components/organisms/Projects";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center px-4">
+    <main className="flex flex-col items-center px-4 overflow-hidden">
       <Hero />
       <Divider />
       <About />
