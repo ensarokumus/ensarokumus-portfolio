@@ -9,7 +9,10 @@ import TitleAnimation from "../molecules/TitleAnimation";
 
 export default function Hero() {
   return (
-    <section className="flex flex-col sm:flex-row justify-center items-center gap-5 lg:gap-40 lg:px-16 pt-12 sm:pt-24 mb-28 sm:mb-0">
+    <section
+      id="home"
+      className="flex flex-col sm:flex-row justify-center items-center gap-5 lg:gap-40 lg:px-16 pt-12 sm:pt-24 mt-16 mb-28 sm:mb-0 scroll-mt-28"
+    >
       <div className="relative flex flex-col items-center lg:items-start">
         <h1 className="text-6xl sm:text-8xl font-bold max-w-lg text-center lg:text-left text-gray-200">
           <TitleAnimation />

@@ -17,10 +17,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${inter.className} bg-gray-50 text-gray-950 pt-16 sm:pt-30 relative scroll-smooth`}
-      >
+    <html lang="en" className="!scroll-smooth">
+      <body className={`${inter.className} bg-gray-50 text-gray-950 relative`}>
         <div
           aria-hidden
           className="absolute -z-40 inset-0 bg-[radial-gradient(#69696959_1px,transparent_1px)] bg-[size:34px_34px] opacity-80 motion-safe:animate-move-bg"
