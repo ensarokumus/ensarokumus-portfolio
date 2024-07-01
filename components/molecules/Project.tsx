@@ -20,7 +20,7 @@ const projectDetailsVariants: Variants = {
     transition: {
       type: "spring",
       bounce: 0.4,
-      duration: 0.2,
+      duration: 0.8,
     },
   },
 };
@@ -36,7 +36,7 @@ const projectImageVariants: Variants = {
     transition: {
       type: "spring",
       bounce: 0.4,
-      duration: 0.2,
+      duration: 0.8,
     },
   },
 };
@@ -60,13 +60,13 @@ const Project = ({
     >
       <motion.div
         variants={projectDetailsVariants}
-        className="flex flex-col justify-between rounded-lg p-4 min-h-[24rem] lg:max-w-[22rem] bg-gray-100 border border-gray-300 border-opacity-40 shadow-xl shadow-black/[0.1] group-hover:shadow-black/[0.2] transition backdrop-blur-[0.5rem]"
+        className="flex flex-col justify-between rounded-lg p-4 min-h-[24rem] lg:max-w-[22rem] bg-gray-100 border border-gray-300 border-opacity-40"
       >
         <ul className="flex gap-2 flex-wrap">
           {tags.map((tag, index) => (
             <li
               key={index}
-              className="px-3 py-1 text-xs text-gray-500 rounded-full border border-gray-300 bg-white border-opacity-40 shadow-inner shadow-black/[0.1] backdrop-blur-[0.5rem] hover:bg-gray-700 hover:text-white transition"
+              className="px-3 py-1 text-xs text-gray-500 rounded-full border border-gray-300 bg-white border-opacity-40 hover:bg-gray-700 hover:text-white transition"
             >
               {tag}
             </li>
@@ -74,7 +74,7 @@ const Project = ({
         </ul>
         <h3
           className={clsx(
-            "text-4xl font-bold sm:text-6xl bg-gradient-to-r w-fit bg-clip-text text-transparent drop-shadow-sm",
+            "text-4xl font-bold sm:text-6xl bg-gradient-to-r w-fit bg-clip-text text-transparent",
 
             {
               "from-blue-600 to-blue-400": projectColor === "blue",
@@ -91,7 +91,7 @@ const Project = ({
             <Link
               href={gitHubRepo}
               target="_blank"
-              className="pl-2 pr-4 py-2 flex gap-2 items-center text-xs text-gray-700 rounded-full border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem] hover:bg-gray-700 hover:text-white hover:shadow-black/[0.3] transition duration-300"
+              className="pl-2 pr-4 py-2 flex gap-2 items-center text-xs text-gray-700 rounded-full border border-gray-300 bg-white border-opacity-40 hover:bg-gray-700 hover:text-white transition duration-300"
             >
               <FaGithub className="text-xl" /> Source
             </Link>
@@ -100,7 +100,7 @@ const Project = ({
             <Link
               href={liveDemo}
               target="_blank"
-              className="pl-2 pr-4 py-2 flex gap-2 items-center text-xs text-gray-700 rounded-full border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem] hover:bg-gray-700 hover:text-white hover:shadow-black/[0.3] transition duration-300"
+              className="pl-2 pr-4 py-2 flex gap-2 items-center text-xs text-gray-700 rounded-full border border-gray-300 bg-white border-opacity-40 hover:bg-gray-700 hover:text-white transition duration-300"
             >
               <FaCirclePlay className="text-xl" /> Live Demo
             </Link>
@@ -109,7 +109,7 @@ const Project = ({
             <Link
               href={website}
               target="_blank"
-              className="pl-2 pr-4 py-2 flex gap-2 items-center text-xs text-gray-700 rounded-full border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem] hover:bg-gray-700 hover:text-white hover:shadow-black/[0.3] transition duration-300"
+              className="pl-2 pr-4 py-2 flex gap-2 items-center text-xs text-gray-700 rounded-full border border-gray-300 bg-white border-opacity-40 backdrop-blur-[0.5rem] hover:bg-gray-700 hover:text-white transition duration-300"
             >
               <FaLink className="text-xl" /> Website
             </Link>
@@ -118,7 +118,7 @@ const Project = ({
       </motion.div>
       <motion.div
         variants={projectImageVariants}
-        className="flex items-center justify-center px-10 py-5 rounded-lg border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] group-hover:shadow-black/[0.2] transition backdrop-blur-[0.5rem]"
+        className="flex items-center justify-center px-10 py-5 rounded-lg border border-gray-300 bg-white border-opacity-40"
       >
         <ProjectImage imageUrl={imageUrl} />
       </motion.div>
