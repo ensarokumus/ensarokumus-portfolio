@@ -3,6 +3,7 @@ import Divider from "@/components/atoms/Divider";
 import About from "@/components/organisms/About";
 import Projects from "@/components/organisms/Projects";
 import Skills from "@/components/organisms/Skills";
+import Experience from "@/components/organisms/Experience";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <About />
       <Projects />
       <Skills />
+      <Experience />
     </main>
   );
 }

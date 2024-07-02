@@ -1,6 +1,9 @@
 import projectTldrImg from "@/public/project-tldr.png";
 import projectTrustmileImg from "@/public/project-trustmile.png";
 import projectBoviImg from "@/public/project-bovi.png";
+import React from "react";
+import { LuGraduationCap } from "react-icons/lu";
+import { FaBriefcase } from "react-icons/fa6";
 
 export const links = [
   {
@@ -34,50 +37,49 @@ export const experiencesData = [
     title: "BSc Industrial Engineering",
     location: "Istanbul, Turkey",
     company: "Istanbul Technical University",
-    icon: "#",
+    icon: React.createElement(LuGraduationCap),
     date: "2009-2013",
   },
   {
     title: "Brand Manager / SFE Management Trainee / Internship",
     location: "Istanbul, Turkey",
     company: "Pfizer",
-    icon: "#",
+    icon: React.createElement(FaBriefcase),
     date: "2011 - 2016",
   },
   {
     title: "Business Analytics and Insights Manager",
     location: "Istanbul, Turkey",
     company: "Interbank Card Centre",
-    icon: "#",
+    icon: React.createElement(FaBriefcase),
     date: "2016 - 2019",
   },
   {
     title: "Graphic Designer & Marketing Coordinator",
     location: "Sydney, Australia",
     company: "Mitsubishi Electric Australia",
-    icon: "#",
+    icon: React.createElement(FaBriefcase),
     date: "2020 - 2023",
   },
-  ,
   {
     title: "Freelancer",
     location: "Melbourne, Australia",
     company: "Omni Agency",
-    icon: "#",
+    icon: React.createElement(FaBriefcase),
     date: "2023 - present",
   },
   {
     title: "Frontend Developer",
     location: "Melbourne, Australia",
     company: "Bovi (Project: Bovi Web App)",
-    icon: "#",
+    icon: React.createElement(FaBriefcase),
     date: "2024 - present",
   },
   {
     title: "Frontend Developer",
     location: "Melbourne, Australia",
     company: "CoreForm (Project: Trustmile - SaaS App)",
-    icon: "#",
+    icon: React.createElement(FaBriefcase),
     date: "2024 - present",
   },
 ] as const;
