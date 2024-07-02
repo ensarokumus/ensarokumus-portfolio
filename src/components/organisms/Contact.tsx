@@ -51,7 +51,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="scroll-mt-28 mb-28">
+    <section id="contact" className="scroll-mt-28 mb-12 lg:mb-28">
       <SectionHeading>contact me</SectionHeading>
       <motion.div
         initial="offscreen"
