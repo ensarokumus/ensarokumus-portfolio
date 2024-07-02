@@ -1,5 +1,3 @@
-"use client";
-
 import { projectsData } from "../../lib/data";
 import clsx from "clsx";
 import { FaCirclePlay, FaGithub, FaLink } from "react-icons/fa6";

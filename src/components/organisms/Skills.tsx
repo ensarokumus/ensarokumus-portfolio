@@ -1,5 +1,3 @@
-"use client";
-
 import { motion } from "framer-motion";
 import SectionHeading from "../atoms/SectionHeader";
 import { skillsData } from "../../lib/data";
