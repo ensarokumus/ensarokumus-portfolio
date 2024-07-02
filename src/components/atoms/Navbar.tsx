@@ -1,9 +1,5 @@
-"use client";
-
-import React from "react";
 import { motion } from "framer-motion";
-import { links } from "@/lib/data";
-import Link from "next/link";
+import { links } from "../../lib/data";
 
 const Navbar = () => {
   return (
@@ -21,12 +17,12 @@ const Navbar = () => {
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
             >
-              <Link
+              <a
                 className="px-3 py-1 rounded-full hover:bg-gray-200 hover:text-gray-800 active:bg-gray-400 active:text-gray-950 transition"
                 href={link.hash}
               >
                 {link.name}
-              </Link>
+              </a>
             </motion.li>
           ))}
         </ul>

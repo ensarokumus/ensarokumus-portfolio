@@ -1,12 +1,10 @@
-"use client";
-
 import SectionHeading from "../atoms/SectionHeader";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { experiencesData } from "@/lib/data";
+import { experiencesData } from "../../lib/data";
 
 export default function Experience() {
   return (

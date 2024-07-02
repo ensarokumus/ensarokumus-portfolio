@@ -1,8 +1,7 @@
 "use client";
 
-import { projectsData } from "@/lib/data";
+import { projectsData } from "../../lib/data";
 import clsx from "clsx";
-import Link from "next/link";
 import { FaCirclePlay, FaGithub, FaLink } from "react-icons/fa6";
 import ProjectImage from "../atoms/ProjectImage";
 import { motion, Variants } from "framer-motion";
@@ -55,7 +54,7 @@ const Project = ({
     <motion.section
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.5 }}
       className="group flex flex-col max-w-[70rem] lg:flex-row lg:min-h-[30rem] mx-2 md:mx-24 mb-16 transition"
     >
       <motion.div
@@ -88,31 +87,31 @@ const Project = ({
         <p className="text-sm text-gray-700 text-pretty">{description}</p>
         <div className="flex justify-around items-end">
           {gitHubRepo !== "#" && (
-            <Link
+            <a
               href={gitHubRepo}
               target="_blank"
               className="pl-2 pr-4 py-2 flex gap-2 items-center text-xs text-gray-700 rounded-full border border-gray-300 bg-white border-opacity-40 hover:bg-gray-700 hover:text-white transition duration-300"
             >
               <FaGithub className="text-xl" /> Source
-            </Link>
+            </a>
           )}
           {liveDemo !== "#" && (
-            <Link
+            <a
               href={liveDemo}
               target="_blank"
               className="pl-2 pr-4 py-2 flex gap-2 items-center text-xs text-gray-700 rounded-full border border-gray-300 bg-white border-opacity-40 hover:bg-gray-700 hover:text-white transition duration-300"
             >
               <FaCirclePlay className="text-xl" /> Live Demo
-            </Link>
+            </a>
           )}
           {website !== "#" && (
-            <Link
+            <a
               href={website}
               target="_blank"
               className="pl-2 pr-4 py-2 flex gap-2 items-center text-xs text-gray-700 rounded-full border border-gray-300 bg-white border-opacity-40 backdrop-blur-[0.5rem] hover:bg-gray-700 hover:text-white transition duration-300"
             >
               <FaLink className="text-xl" /> Website
-            </Link>
+            </a>
           )}
         </div>
       </motion.div>

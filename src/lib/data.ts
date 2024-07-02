@@ -1,6 +1,6 @@
-import projectTldrImg from "@/public/project-tldr.png";
-import projectTrustmileImg from "@/public/project-trustmile.png";
-import projectBoviImg from "@/public/project-bovi.png";
+import projectTldrImg from "/project-tldr.png";
+import projectTrustmileImg from "/project-trustmile.png";
+import projectBoviImg from "/project-bovi.png";
 import React from "react";
 import { LuGraduationCap } from "react-icons/lu";
 import { FaBriefcase } from "react-icons/fa6";

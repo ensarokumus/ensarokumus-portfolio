@@ -1,8 +1,3 @@
-"use client";
-
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { FaDownload, FaGithub, FaLinkedin } from "react-icons/fa6";
 import TitleAnimation from "../molecules/TitleAnimation";
@@ -34,21 +29,21 @@ export default function Hero() {
           >
             &lt;Contact Me /&gt;
           </button>
-          <Link href="/Resume_EnsarOkumus_Jun24.pdf" download target="_blank">
+          <a href="/Resume_EnsarOkumus_Jun24.pdf" download target="_blank">
             <button className="flex items-center gap-3 px-4 py-2 border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem] text-sm text-gray-600 rounded-full hover:bg-gray-100 hover:text-gray-800 transition-colors duration-300">
               Download CV <FaDownload className="h-5 w-5" />
             </button>
-          </Link>
-          <Link href="https://github.com/ensarokumus" target="_blank">
+          </a>
+          <a href="https://github.com/ensarokumus" target="_blank">
             <button className="px-2 py-2 border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem] text-sm text-gray-600 rounded-full hover:bg-gray-100 hover:text-gray-800 transition-colors duration-300">
               <FaGithub className="h-5 w-5" />
             </button>
-          </Link>
-          <Link href="https://www.linkedin.com/in/ensarokumus/" target="_blank">
+          </a>
+          <a href="https://www.linkedin.com/in/ensarokumus/" target="_blank">
             <button className="px-2 py-2 border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem] text-sm text-gray-600 rounded-full hover:bg-gray-100 hover:text-gray-800 transition-colors duration-300">
               <FaLinkedin className="h-5 w-5" />
             </button>
-          </Link>
+          </a>
         </motion.div>
       </div>
 
@@ -63,12 +58,11 @@ export default function Hero() {
         }}
       >
         <div className="relative">
-          <Image
+          <img
             src="/ensar-profile-pic.png"
             alt="Ensar Okumus"
             height={225}
             width={225}
-            priority
             className="relative z-20 rounded-xl drop-shadow-xl grayscale"
           />
           <div

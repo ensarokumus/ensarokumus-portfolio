@@ -1,4 +1,4 @@
-import { projectsData } from "@/lib/data";
+import { projectsData } from "../../lib/data";
 import SectionHeading from "../atoms/SectionHeader";
 import Project from "../molecules/Project";
 
