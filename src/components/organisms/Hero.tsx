@@ -23,12 +23,11 @@ export default function Hero() {
           }}
           className="flex mt-6 items-center justify-center gap-5 flex-wrap"
         >
-          <button
-            className="px-4 py-2 border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem] text-sm text-gray-600 rounded-full hover:bg-gray-100 hover:text-gray-800 transition-colors duration-300"
-            // TODO: add onClick to scroll to contact section
-          >
-            &lt;Contact Me /&gt;
-          </button>
+          <a href="#contact">
+            <button className="px-4 py-2 border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem] text-sm text-gray-600 rounded-full hover:bg-gray-100 hover:text-gray-800 transition-colors duration-300">
+              &lt;Contact Me /&gt;
+            </button>
+          </a>
           <a href="/Resume_EnsarOkumus_Jun24.pdf" download target="_blank">
             <button className="flex items-center gap-3 px-4 py-2 border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem] text-sm text-gray-600 rounded-full hover:bg-gray-100 hover:text-gray-800 transition-colors duration-300">
               Download CV <FaDownload className="h-5 w-5" />
