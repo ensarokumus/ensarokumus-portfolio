@@ -43,6 +43,7 @@ const Project = ({
   description,
   tags,
   imageUrl,
+  imageAlt,
   projectColor,
   gitHubRepo,
   liveDemo,
@@ -117,7 +118,7 @@ const Project = ({
         variants={projectImageVariants}
         className="flex items-center justify-center px-10 py-5 rounded-lg border border-gray-300 bg-white border-opacity-40"
       >
-        <ProjectImage imageUrl={imageUrl} />
+        <ProjectImage imageUrl={imageUrl} imageAlt={imageAlt} />
       </motion.div>
     </motion.section>
   );

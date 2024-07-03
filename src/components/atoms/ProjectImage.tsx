@@ -1,12 +1,13 @@
 interface ProjectImageProps {
   imageUrl: string;
+  imageAlt: string;
 }
 
-const ProjectImage = ({ imageUrl }: ProjectImageProps) => {
+const ProjectImage = ({ imageUrl, imageAlt }: ProjectImageProps) => {
   return (
     <img
       src={imageUrl}
-      alt="screenshot of the web app"
+      alt={imageAlt}
       className="rounded-lg shadow-xl shadow-black/[0.2] backdrop-blur-[0.5rem]"
     />
   );
