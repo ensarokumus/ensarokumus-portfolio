@@ -57,7 +57,7 @@ const Contact = () => {
         initial="offscreen"
         whileInView="onscreen"
         variants={slideInBelowAnimationVariants}
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.25 }}
         className="flex flex-col lg:flex-row mx-2 max-w-[60rem]"
       >
         <div className="relative flex flex-col justify-end gap-4 min-h-[14rem] lg:w-1/2 rounded-lg p-4 bg-gray-100 border border-gray-300 border-opacity-40 shadow-xl overflow-clip">
