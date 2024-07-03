@@ -27,27 +27,26 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     setIsSubmitting(true);
 
-    axios.defaults.headers.post["Content-Type"] = "application/json";
-    axios
-      .post("https://formsubmit.co/ajax/5593fd1ee34005c5cbee78d27aa78e06", {
-        email: email,
-        message: message,
-      })
-      .then((response) => {
-        console.log(response);
-        toast.success("Email sent successfully");
-        setEmail("");
-        setMessage("");
-      })
-      .catch((error) => toast.error(error))
-      .finally(() => {
-        setIsSubmitting(false);
-      });
+    try {
+      const response = await axios.post(
+        "https://formsubmit.co/ajax/5593fd1ee34005c5cbee78d27aa78e06",
+        { email, message },
+        { headers: { "Content-Type": "application/json" } }
+      );
+      console.log(response);
+      toast.success("Email sent successfully");
+      setEmail("");
+      setMessage("");
+    } catch (error) {
+      toast.error("Failed to send email");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -68,28 +67,42 @@ const Contact = () => {
           <p className="text-sm text-center lg:text-left text-gray-700">
             Thank you for taking the time to review my portfolio. If you're
             interested in hiring me, please feel free to reach out directly at{" "}
-            <a href="mailto:ensarokumus@gmail.com" className="text-blue-500">
+            <a
+              href="mailto:ensarokumus@gmail.com"
+              className="text-blue-700 underline"
+            >
               ensarokumus@gmail.com
             </a>{" "}
             or through this form.
           </p>
-          <div className="flex gap-2 self-center lg:self-start">
-            <a href="https://github.com/ensarokumus" target="_blank">
-              <button className="px-2 py-2 border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem] text-sm text-gray-600 rounded-full hover:bg-gray-100 hover:text-gray-800 transition-colors duration-300">
-                <FaGithub className="h-5 w-5" />
-              </button>
+          <nav className="flex gap-2 self-center lg:self-start">
+            <a
+              href="https://github.com/ensarokumus"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-2 py-2 border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem] text-sm text-gray-600 rounded-full hover:bg-gray-100 hover:text-gray-800 transition-colors duration-300"
+              aria-label="GitHub Profile"
+            >
+              <FaGithub className="h-5 w-5" aria-hidden="true" />
             </a>
-            <a href="https://www.linkedin.com/in/ensarokumus/" target="_blank">
-              <button className="px-2 py-2 border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem] text-sm text-gray-600 rounded-full hover:bg-gray-100 hover:text-gray-800 transition-colors duration-300">
-                <FaLinkedin className="h-5 w-5" />
-              </button>
+            <a
+              href="https://www.linkedin.com/in/ensarokumus/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-2 py-2 border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem] text-sm text-gray-600 rounded-full hover:bg-gray-100 hover:text-gray-800 transition-colors duration-300"
+              aria-label="LinkedIn Profile"
+            >
+              <FaLinkedin className="h-5 w-5" aria-hidden="true" />
             </a>
-          </div>
+          </nav>
         </div>
         <form
           className="flex flex-col lg:w-1/2 min-h-[24rem] z-10 sm:z-0 gap-5 items-center justify-center px-4 lg:px-10 py-4 lg:py-5 text-sm rounded-lg border border-gray-300 bg-white border-opacity-40 shadow-xl"
           onSubmit={handleSubmit}
         >
+          <label htmlFor="email" className="sr-only">
+            Your email address
+          </label>
           <input
             className="h-14 w-full p-2 lg:p-3 rounded-lg border border-gray-300 text-gray-700"
             name="senderEmail"
@@ -101,6 +114,9 @@ const Contact = () => {
             disabled={isSubmitting}
             onChange={(e) => setEmail(e.target.value)}
           />
+          <label htmlFor="message" className="sr-only">
+            Your message
+          </label>
           <textarea
             className="w-full h-full p-2 lg:p-3 flex-1 rounded-lg border border-gray-300 resize-none text-gray-700"
             id="message"
@@ -118,11 +134,20 @@ const Contact = () => {
             className="group flex items-center gap-2 px-4 py-2 border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem] text-sm text-gray-600 rounded-full hover:bg-gray-100 hover:text-gray-800 transition-colors duration-300"
           >
             {isSubmitting ? (
-              <CgSpinner className="h-5 w-5 animate-spin opacity-70" />
+              <>
+                <CgSpinner
+                  className="h-5 w-5 animate-spin opacity-70"
+                  aria-hidden={true}
+                />
+                <span className="sr-only">Submitting...</span>
+              </>
             ) : (
               <>
                 Submit{" "}
-                <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />{" "}
+                <FaPaperPlane
+                  className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1"
+                  aria-hidden={true}
+                />{" "}
               </>
             )}
           </button>
