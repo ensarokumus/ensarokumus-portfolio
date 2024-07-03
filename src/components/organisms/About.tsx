@@ -22,10 +22,9 @@ export default function About() {
       </p>
 
       <p>
-        <span className="italic">My favorite part of programming</span> is the
-        problem-solving aspect. I <span className="underline">love</span> the
-        feeling of finally figuring out a solution to a problem. My core stack
-        is{" "}
+        <em>My favorite part of programming</em> is the problem-solving aspect.
+        I <em>love</em> the feeling of finally figuring out a solution to a
+        problem. My core stack is{" "}
         <span className="font-semibold">
           React, TypeScript, Next.js, Node.js, Express and MongoDB
         </span>

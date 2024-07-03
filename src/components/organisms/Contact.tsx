@@ -105,6 +105,7 @@ const Contact = () => {
           </label>
           <input
             className="h-14 w-full p-2 lg:p-3 rounded-lg border border-gray-300 text-gray-700"
+            id="email"
             name="senderEmail"
             type="email"
             required
