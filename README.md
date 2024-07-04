@@ -1,30 +1,39 @@
-# React + TypeScript + Vite
+# ensar okumus - Personal Portfolio Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Built with React, Vite, TypeScript, TailwindCSS, Framer Motion, FormSubmit.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Project Image](https://github.com/ensarokumus/ensarokumus-portfolio/blob/main/public/portfolio-thumbnail.png)
 
-## Expanding the ESLint configuration
+You can check out my portfolio live on Vercel!
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+[Live Demo @Vercel](https://ensarokumus-portfolio.vercel.app/)
 
-- Configure the top-level `parserOptions` property like this:
+## Features
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+- Fully responsive design
+- Sleek, modern UI designed with 'TailwindCSS'
+- Entirely written in TypeScript
+- Animations powered by Framer Motion
+- FormSubmit for simple form handling
+- Light/dark mode based on system settings
+- Light/dark mode toggle for personal preference
+
+## Getting started
+
+To begin using this project in your local environment, execute the following command:
+
+```bash
+  git clone https://github.com/ensarokumus/ensarokumus-portfolio.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Then, via the script below, and you're all set to start!
+
+```bash
+  npm run dev
+```
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
