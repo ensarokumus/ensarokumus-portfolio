@@ -33,14 +33,14 @@ const ContactForm = () => {
 
   return (
     <form
-      className="flex flex-col lg:w-1/2 min-h-[24rem] z-10 sm:z-0 gap-5 items-center justify-center px-4 lg:px-10 py-4 lg:py-5 text-sm rounded-lg border border-gray-300 bg-white border-opacity-40 shadow-xl"
+      className="flex flex-col lg:w-1/2 min-h-[24rem] z-10 sm:z-0 gap-5 items-center justify-center px-4 lg:px-10 py-4 lg:py-5 text-sm rounded-lg border border-gray-300 dark:border-stone-700 bg-white dark:bg-stone-900 border-opacity-40 shadow-xl"
       onSubmit={handleSubmit}
     >
       <label htmlFor="email" className="sr-only">
         Your email address
       </label>
       <input
-        className="h-14 w-full p-2 lg:p-3 rounded-lg border border-gray-300 text-gray-700"
+        className="h-14 w-full p-2 lg:p-3 rounded-lg border border-gray-300 dark:border-stone-600 text-gray-700 dark:text-stone-50 dark:bg-stone-700 dark:placeholder:text-stone-400"
         id="email"
         name="senderEmail"
         type="email"
@@ -55,7 +55,7 @@ const ContactForm = () => {
         Your message
       </label>
       <textarea
-        className="w-full h-full p-2 lg:p-3 flex-1 rounded-lg border border-gray-300 resize-none text-gray-700"
+        className="w-full h-full p-2 lg:p-3 flex-1 rounded-lg border border-gray-300 dark:border-stone-600 resize-none text-gray-700 dark:text-stone-50 dark:bg-stone-700 dark:placeholder:text-stone-400"
         id="message"
         name="message"
         placeholder="Your message"
@@ -68,7 +68,7 @@ const ContactForm = () => {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="group flex items-center gap-2 px-4 py-2 border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem] text-sm text-gray-600 rounded-full hover:bg-gray-100 hover:text-gray-800 transition-colors duration-300"
+        className="group flex items-center gap-2 px-4 py-2 border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem] text-sm text-gray-600 rounded-full hover:bg-gray-100 hover:text-gray-800 duration-300 dark:bg-stone-900 dark:border-stone-700 dark:shadow-stone-950/[0.3] dark:text-stone-50 dark:hover:bg-stone-700 dark:hover:text-gray-300 active:bg-gray-400 dark:active:bg-stone-800 active:text-gray-950 dark:active:text-gray-400 transition-colors"
       >
         {isSubmitting ? (
           <>

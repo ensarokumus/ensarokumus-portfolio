@@ -58,13 +58,13 @@ const Project = ({
     >
       <motion.div
         variants={projectDetailsVariants}
-        className="flex flex-col justify-between rounded-lg p-4 min-h-[24rem] lg:max-w-[22rem] bg-gray-100 border border-gray-300 border-opacity-40"
+        className="flex flex-col justify-between rounded-lg p-4 min-h-[24rem] lg:max-w-[22rem] bg-gray-100 dark:bg-stone-800 dark:border-stone-700 border border-gray-300 border-opacity-40"
       >
         <ul className="flex gap-2 flex-wrap">
           {tags.map((tag, index) => (
             <li
               key={index}
-              className="px-3 py-1 text-xs text-gray-500 rounded-full border border-gray-300 bg-white border-opacity-40 hover:bg-gray-700 hover:text-white transition"
+              className="px-3 py-1 text-xs text-gray-500 rounded-full border border-gray-300 bg-white dark:bg-stone-600 dark:text-stone-50 dark:border-stone-500 border-opacity-40 hover:bg-gray-700 hover:text-white transition"
             >
               {tag}
             </li>
@@ -83,13 +83,15 @@ const Project = ({
         >
           {title}
         </h3>
-        <p className="text-sm text-gray-700 text-pretty">{description}</p>
+        <p className="text-sm text-gray-700 dark:text-stone-50 text-pretty">
+          {description}
+        </p>
         <div className="flex justify-around items-end">
           {gitHubRepo !== "#" && (
             <a
               href={gitHubRepo}
               target="_blank"
-              className="pl-2 pr-4 py-2 flex gap-2 items-center text-xs text-gray-700 rounded-full border border-gray-300 bg-white border-opacity-40 hover:bg-gray-700 hover:text-white transition duration-300"
+              className="pl-2 pr-4 py-2 flex items-center gap-3 border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem] text-sm text-gray-600 rounded-full hover:bg-gray-100 hover:text-gray-800 duration-300 dark:bg-stone-900 dark:border-stone-700 dark:shadow-stone-950/[0.3] dark:text-stone-50 dark:hover:bg-stone-700 dark:hover:text-gray-300 active:bg-gray-400 dark:active:bg-stone-800 active:text-gray-950 dark:active:text-gray-400 transition-colors"
             >
               <FaGithub className="text-xl" /> Source
             </a>
@@ -98,7 +100,7 @@ const Project = ({
             <a
               href={liveDemo}
               target="_blank"
-              className="pl-2 pr-4 py-2 flex gap-2 items-center text-xs text-gray-700 rounded-full border border-gray-300 bg-white border-opacity-40 hover:bg-gray-700 hover:text-white transition duration-300"
+              className="pl-2 pr-4 py-2 flex items-center gap-3 border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem] text-sm text-gray-600 rounded-full hover:bg-gray-100 hover:text-gray-800 duration-300 dark:bg-stone-900 dark:border-stone-700 dark:shadow-stone-950/[0.3] dark:text-stone-50 dark:hover:bg-stone-700 dark:hover:text-gray-300 active:bg-gray-400 dark:active:bg-stone-800 active:text-gray-950 dark:active:text-gray-400 transition-colors"
             >
               <FaCirclePlay className="text-xl" /> Live Demo
             </a>
@@ -107,7 +109,7 @@ const Project = ({
             <a
               href={website}
               target="_blank"
-              className="pl-2 pr-4 py-2 flex gap-2 items-center text-xs text-gray-700 rounded-full border border-gray-300 bg-white border-opacity-40 backdrop-blur-[0.5rem] hover:bg-gray-700 hover:text-white transition duration-300"
+              className="pl-2 pr-4 py-2 flex items-center gap-3 border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem] text-sm text-gray-600 rounded-full hover:bg-gray-100 hover:text-gray-800 duration-300 dark:bg-stone-900 dark:border-stone-700 dark:shadow-stone-950/[0.3] dark:text-stone-50 dark:hover:bg-stone-700 dark:hover:text-gray-300 active:bg-gray-400 dark:active:bg-stone-800 active:text-gray-950 dark:active:text-gray-400 transition-colors"
             >
               <FaLink className="text-xl" /> Website
             </a>
@@ -116,7 +118,14 @@ const Project = ({
       </motion.div>
       <motion.div
         variants={projectImageVariants}
-        className="flex items-center justify-center px-10 py-5 rounded-lg border border-gray-300 bg-white border-opacity-40"
+        className={clsx(
+          "flex items-center justify-center px-10 py-5 rounded-lg border border-gray-300 bg-white border-opacity-40 dark:border-stone-700 dark:bg-gradient-to-r",
+          {
+            "from-blue-600 to-blue-400": projectColor === "blue",
+            "from-orange-600 to-orange-400": projectColor === "orange",
+            "from-green-600 to-green-400": projectColor === "green",
+          }
+        )}
       >
         <ProjectImage imageUrl={imageUrl} imageAlt={imageAlt} />
       </motion.div>

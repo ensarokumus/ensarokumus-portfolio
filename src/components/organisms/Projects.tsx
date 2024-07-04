@@ -4,7 +4,7 @@ import Project from "../molecules/Project";
 
 const Projects = () => {
   return (
-    <section id="projects" className="mb-28 scroll-mt-28">
+    <section id="projects" className="mb-12 lg:mb-28 scroll-mt-28">
       <SectionHeading>my projects</SectionHeading>
       <div>
         {projectsData.map((project, index) => (

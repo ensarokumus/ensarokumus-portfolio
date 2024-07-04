@@ -9,7 +9,7 @@ export default function Hero() {
       className="flex flex-col sm:flex-row justify-center items-center gap-5 lg:gap-40 lg:px-16 pt-12 sm:pt-24 mt-16 mb-28 sm:mb-0 scroll-mt-28"
     >
       <div className="relative flex flex-col items-center lg:items-start">
-        <h1 className="text-6xl sm:text-8xl font-bold max-w-lg text-center lg:text-left text-gray-200">
+        <h1 className="text-6xl sm:text-8xl font-bold max-w-lg text-center lg:text-left">
           <TitleAnimation />
         </h1>
 
@@ -26,7 +26,7 @@ export default function Hero() {
         >
           <a
             href="#contact"
-            className="px-4 py-2 border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem] text-sm text-gray-600 rounded-full hover:bg-gray-100 hover:text-gray-800 transition-colors duration-300"
+            className="px-4 py-2 border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem] text-sm text-gray-600 rounded-full hover:bg-gray-100 hover:text-gray-800 duration-300 dark:bg-stone-900 dark:border-stone-700 dark:shadow-stone-950/[0.3] dark:text-stone-50 dark:hover:bg-stone-700 dark:hover:text-gray-300 active:bg-gray-400 dark:active:bg-stone-800 active:text-gray-950 dark:active:text-gray-400 transition-colors"
           >
             &lt;Contact Me /&gt;
           </a>
@@ -35,7 +35,7 @@ export default function Hero() {
             download
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 px-4 py-2 border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem] text-sm text-gray-600 rounded-full hover:bg-gray-100 hover:text-gray-800 transition-colors duration-300"
+            className="flex items-center gap-3 px-4 py-2 border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem] text-sm text-gray-600 rounded-full hover:bg-gray-100 hover:text-gray-800 duration-300 dark:bg-stone-900 dark:border-stone-700 dark:shadow-stone-950/[0.3] dark:text-stone-50 dark:hover:bg-stone-700 dark:hover:text-gray-300 active:bg-gray-400 dark:active:bg-stone-800 active:text-gray-950 dark:active:text-gray-400 transition-colors"
           >
             Download CV <FaDownload className="h-5 w-5" aria-hidden="true" />
           </a>
@@ -43,7 +43,7 @@ export default function Hero() {
             href="https://github.com/ensarokumus"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-2 py-2 border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem] text-sm text-gray-600 rounded-full hover:bg-gray-100 hover:text-gray-800 transition-colors duration-300"
+            className="px-2 py-2 border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem] text-sm text-gray-600 rounded-full hover:bg-gray-100 hover:text-gray-800 duration-300 dark:bg-stone-900 dark:border-stone-700 dark:shadow-stone-950/[0.3] dark:text-stone-50 dark:hover:bg-stone-700 dark:hover:text-gray-300 active:bg-gray-400 dark:active:bg-stone-800 active:text-gray-950 dark:active:text-gray-400 transition-colors"
             aria-label="Github Profile"
           >
             <FaGithub className="h-5 w-5" aria-hidden="true" />
@@ -52,7 +52,7 @@ export default function Hero() {
             href="https://www.linkedin.com/in/ensarokumus/"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-2 py-2 border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem] text-sm text-gray-600 rounded-full hover:bg-gray-100 hover:text-gray-800 transition-colors duration-300"
+            className="px-2 py-2 border border-gray-300 bg-white border-opacity-40 shadow-xl shadow-black/[0.1] backdrop-blur-[0.5rem] text-sm text-gray-600 rounded-full hover:bg-gray-100 hover:text-gray-800 duration-300 dark:bg-stone-900 dark:border-stone-700 dark:shadow-stone-950/[0.3] dark:text-stone-50 dark:hover:bg-stone-700 dark:hover:text-gray-300 active:bg-gray-400 dark:active:bg-stone-800 active:text-gray-950 dark:active:text-gray-400 transition-colors"
             aria-label="LinkedIn Profile"
           >
             <FaLinkedin className="h-5 w-5" aria-hidden="true" />
@@ -76,15 +76,15 @@ export default function Hero() {
           />
           <div
             aria-hidden={true}
-            className="absolute z-10 top-[15px] right-[20px] w-full h-[80%] rounded-xl border-gray-400 border-4"
+            className="absolute z-10 top-[15px] right-[20px] w-full h-[80%] rounded-xl border-gray-400 dark:border-stone-50 border-4"
           ></div>
           <div
             aria-hidden={true}
-            className="absolute bottom-0 w-full h-[80%] place-self-end rounded-xl bg-gradient-to-r from-green-400/50 via-blue-400/50 to-red-400/50"
+            className="absolute bottom-0 w-full h-[80%] place-self-end rounded-xl bg-gradient-to-r from-green-400/50 via-blue-400/50 to-red-400/50 dark:from-green-400/80 dark:via-blue-400/80 dark:to-red-400/80"
           ></div>
         </div>
 
-        <p className="mt-6 text-gray-700 text-lg max-w-lg text-center sm:text-left">
+        <p className="mt-6 text-gray-700 dark:text-stone-50 text-lg max-w-lg text-center sm:text-left">
           Hello! I&apos;m Ensar, a{" "}
           <span className="font-semibold">full stack developer</span> with a
           focus on <span className="font-semibold">ReactJS. </span>
