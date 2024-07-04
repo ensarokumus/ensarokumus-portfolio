@@ -1,6 +1,7 @@
 import projectTldrImg from "/project-tldr.png";
 import projectTrustmileImg from "/project-trustmile.png";
 import projectBoviImg from "/project-bovi.png";
+import projectPortfolio from "/project-portfolio.png";
 import React from "react";
 import { FaReact } from "react-icons/fa6";
 import { TbBriefcase2 } from "react-icons/tb";
@@ -143,6 +144,18 @@ export const projectsData = [
     gitHubRepo: "#",
     liveDemo: "#",
     website: "https://bovi.fi/en/",
+  },
+  {
+    title: "Portfolio",
+    description:
+      "Created a responsive portfolio website to display my projects and expertise. Implemented using React and TypeScript for the frontend, styled with TailwindCSS, and enhanced with FramerMotion animations. Integrated FormSubmit for form handling. The site features an automatic light/dark mode based on the user's system settings, along with a manual toggle for personal preference.",
+    tags: ["React", "TypeScript", "TailwindCSS", "FramerMotion", "FormSubmit"],
+    imageUrl: projectPortfolio,
+    imageAlt: "screenshot of my portfolio website",
+    projectColor: "purple",
+    gitHubRepo: "https://github.com/ensarokumus/ensarokumus-portfolio",
+    liveDemo: "https://ensarokumus-portfolio.vercel.app/",
+    website: "#",
   },
 ] as const;
 

@@ -78,6 +78,8 @@ const Project = ({
               "from-blue-600 to-blue-400": projectColor === "blue",
               "from-orange-600 to-orange-400": projectColor === "orange",
               "from-green-600 to-green-400": projectColor === "green",
+              "from-blue-400 via-green-400 to-red-400":
+                projectColor === "purple",
             }
           )}
         >
@@ -124,6 +126,7 @@ const Project = ({
             "from-blue-600 to-blue-400": projectColor === "blue",
             "from-orange-600 to-orange-400": projectColor === "orange",
             "from-green-600 to-green-400": projectColor === "green",
+            "from-blue-400 via-green-400 to-red-400": projectColor === "purple",
           }
         )}
       >
