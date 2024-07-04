@@ -12,7 +12,7 @@ const BackgroundAnimations = () => {
         />
         <div
           aria-hidden
-          className="absolute bg-stone-700 -right-14 -top-36 blur-[6rem] rounded-full aspect-square bg-gradient-to-r from-blue-500 to-red-500 h-72 -z-50 motion-safe:animate-spin-slow"
+          className="absolute -right-14 -top-36 blur-[6rem] rounded-full aspect-square bg-gradient-to-r from-blue-500 to-red-500 h-72 -z-50 motion-safe:animate-spin-slow"
         />
       </div>
     </>
