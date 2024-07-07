@@ -18,7 +18,7 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{
             duration: 0.8,
-            delay: 2,
+            delay: 1.3,
             type: "spring",
             bounce: 0.4,
           }}
@@ -86,8 +86,13 @@ export default function Hero() {
 
         <p className="mt-6 text-gray-700 dark:text-stone-50 text-lg max-w-lg text-center sm:text-left">
           Hello! I&apos;m Ensar, a{" "}
-          <span className="font-semibold">full stack developer</span> with a
-          focus on <span className="font-semibold">ReactJS. </span>
+          <span className="font-semibold dark:text-orange-500">
+            full stack developer
+          </span>{" "}
+          with a focus on{" "}
+          <span className="font-semibold dark:text-orange-500">
+            frontend technologies.{" "}
+          </span>
           I&apos;m excited to share my journey and projects with you. Enjoy your
           visit!
         </p>
