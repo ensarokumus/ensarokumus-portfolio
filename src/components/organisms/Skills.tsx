@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import SectionHeading from "../atoms/SectionHeader";
-import { skillsData } from "../../lib/data";
+import { groupedSkills } from "../../lib/data";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -19,24 +19,42 @@ const fadeInAnimationVariants = {
 const Skills = () => {
   return (
     <section id="skills" className="scroll-mt-28 mb-28">
-      <SectionHeading>technical skills</SectionHeading>
-      <ul className="flex flex-wrap justify-center max-w-[70rem] mx-2 md:mx-24 gap-2 text-lg text-gray-800 dark:text-stone-50">
-        {skillsData.map((skill, index) => (
-          <motion.li
-            className="bg-white dark:bg-stone-800 border border-gray-200 dark:border-stone-700 text-sm rounded-xl px-5 py-3"
-            key={index}
-            variants={fadeInAnimationVariants}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: true,
-            }}
-            custom={index}
-          >
-            {skill}
-          </motion.li>
+      <SectionHeading>Technical Skills</SectionHeading>
+      <div className="max-w-[70rem] mx-2 md:mx-24">
+        {Object.entries(groupedSkills).map(([group, skills], groupIndex) => (
+          <div key={group} className="mb-8">
+            <motion.h3
+              variants={fadeInAnimationVariants}
+              initial="initial"
+              whileInView="animate"
+              viewport={{
+                once: true,
+              }}
+              custom={groupIndex * (skills.length + 1)}
+              className="text-xl font-semibold mb-4 text-gray-800 dark:text-stone-200"
+            >
+              {group}
+            </motion.h3>
+            <ul className="flex flex-wrap gap-2">
+              {skills.map((skill, skillIndex) => (
+                <motion.li
+                  className="bg-white dark:bg-stone-800 border border-gray-200 dark:border-stone-700 text-sm rounded-xl px-5 py-3 text-gray-800 dark:text-stone-50"
+                  key={`${group}-${skill}`}
+                  variants={fadeInAnimationVariants}
+                  initial="initial"
+                  whileInView="animate"
+                  viewport={{
+                    once: true,
+                  }}
+                  custom={groupIndex * (skills.length + 1) + skillIndex + 1}
+                >
+                  {skill}
+                </motion.li>
+              ))}
+            </ul>
+          </div>
         ))}
-      </ul>
+      </div>
     </section>
   );
 };
