@@ -177,7 +177,6 @@ export const groupedSkills = {
   "Backend & Databases": [
     "Node.js",
     "Express.js",
-    "Python",
     "PostgreSQL",
     "MongoDB",
     "GraphQL",
