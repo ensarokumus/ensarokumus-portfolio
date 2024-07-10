@@ -8,6 +8,7 @@ import { Toaster } from "react-hot-toast";
 import Footer from "./components/organisms/Footer.tsx";
 import ThemeSwitch from "./components/atoms/ThemeSwitch.tsx";
 import ThemeContextProvider from "./context/ThemeContextProvider.tsx";
+import { Analytics } from "@vercel/analytics/react";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -18,6 +19,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <Toaster position="bottom-right" />
       <Footer />
       <ThemeSwitch />
+      <Analytics />
     </ThemeContextProvider>
   </React.StrictMode>
 );
