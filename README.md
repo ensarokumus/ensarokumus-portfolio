@@ -1,4 +1,4 @@
-# ensar okumus - Personal Portfolio Project
+# ensarokumus-portfolio - Personal Portfolio Project
 
 Built with React, Vite, TypeScript, TailwindCSS, Framer Motion, FormSubmit.
 
@@ -31,6 +31,8 @@ To begin using this project in your local environment, execute the following com
 Then, via the script below, and you're all set to start!
 
 ```bash
+  cd ensarokumus-portfolio
+  npm install
   npm run dev
 ```
 
