@@ -97,7 +97,7 @@ export const experiencesData = [
     icon: React.createElement(FaReact),
     date: "2024 - 2024",
     description:
-      "Working with the Australian startup CoreForm as a frontend developer, collaborating with a team of backend and other frontend engineers to enhance my skills.",
+      "Worked with the Australian startup CoreForm as a frontend developer on their Trustmile project, collaborated with a team of backend and other frontend engineers to enhance my skills.",
   },
   {
     title: "Junior Developer",
