@@ -2,6 +2,7 @@ import projectTldrImg from "/project-tldr.png";
 import projectTrustmileImg from "/project-trustmile.png";
 import projectBoviImg from "/project-bovi.png";
 import projectPortfolio from "/project-portfolio.png";
+import projectQuadLock from "/project-quadlock.png";
 import React from "react";
 import { FaReact } from "react-icons/fa6";
 import { TbBriefcase2 } from "react-icons/tb";
@@ -76,7 +77,7 @@ export const experiencesData = [
     location: "Melbourne, Australia",
     company: "Omni Agency",
     icon: React.createElement(TbBriefcase2),
-    date: "2023 - present",
+    date: "2023 - 2024",
     description:
       "Committed to becoming a developer by quitting my designer job and starting my own freelance agency while studying software development.",
   },
@@ -85,7 +86,7 @@ export const experiencesData = [
     location: "Melbourne, Australia",
     company: "Bovi (Project: Bovi Web App)",
     icon: React.createElement(FaReact),
-    date: "2024 - present",
+    date: "2024 - 2024",
     description:
       "Joined the Finnish startup Bovi to develop their web app, a platform for users to find deals at their favorite cafes and restaurants.",
   },
@@ -94,13 +95,34 @@ export const experiencesData = [
     location: "Melbourne, Australia",
     company: "CoreForm (Project: Trustmile)",
     icon: React.createElement(FaReact),
-    date: "2024 - present",
+    date: "2024 - 2024",
     description:
       "Working with the Australian startup CoreForm as a frontend developer, collaborating with a team of backend and other frontend engineers to enhance my skills.",
+  },
+  {
+    title: "Junior Developer",
+    location: "Melbourne, Australia",
+    company: "Quad Lock",
+    icon: React.createElement(FaReact),
+    date: "2024 - present",
+    description:
+      "As my first full-time role, started working for the Australian startup Quad Lock as a junior developer to work on their D2C & B2B e-commerce sites built with React & Shopify Liquid.",
   },
 ] as const;
 
 export const projectsData = [
+  {
+    title: "Quad Lock",
+    description:
+      "Quad Lock's e-commerce websites serve millions of customers through their D2C & B2B channels around the world. Alongside custom Liquid template for Shopify, main tech stack includes React, custom backend apps created with Express, and Sanity CMS for content management.",
+    tags: ["React", "Shopify Liquid", "Express", "GraphQL" ,"Sanity", "Zendesk", "Klaviyo", "Sass", "Bootstrap"],
+    imageUrl: projectQuadLock,
+    imageAlt: "screenshot of TL;DR e-commerce website home page",
+    projectColor: "blue",
+    gitHubRepo: "#",
+    liveDemo: "#",
+    website: "https://www.quadlockcase.com.au/",
+  },
   {
     title: "TL;DR",
     description:
@@ -166,8 +188,10 @@ export const groupedSkills = {
     "TypeScript",
     "HTML",
     "CSS",
+    "Liquid",
     "SASS",
     "Tailwind CSS",
+    "Bootstrap",
     "Material UI",
     "Framer Motion",
     "Next.js",
@@ -182,6 +206,7 @@ export const groupedSkills = {
     "GraphQL",
     "Prisma",
     "Apollo",
+    "Sanity CMS",
   ],
   "Developer Tools & Practices": [
     "Git",
