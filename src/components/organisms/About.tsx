@@ -33,12 +33,12 @@ export default function About() {
         <span className="font-semibold dark:text-orange-500">
           React, TypeScript, Next.js, Node.js, Express and MongoDB
         </span>
-        . I am always looking to learn new technologies and currently looking
-        for a{" "}
+        . I am always looking to learn new technologies and currently working
+        at{" "}
         <span className="font-semibold dark:text-orange-500">
-          full-time position
+          Quad Lock
         </span>{" "}
-        as a software developer.
+        as a Junior Developer.
       </p>
     </motion.section>
   );
