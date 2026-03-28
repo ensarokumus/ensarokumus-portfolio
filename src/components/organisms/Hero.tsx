@@ -31,7 +31,7 @@ export default function Hero() {
             &lt;Contact Me /&gt;
           </a>
           <a
-            href="/Resume_EnsarOkumus_2025.pdf"
+            href="/Resume_EnsarOkumus_2026.pdf"
             download
             target="_blank"
             rel="noopener noreferrer"

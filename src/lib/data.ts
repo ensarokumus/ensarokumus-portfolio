@@ -100,13 +100,13 @@ export const experiencesData = [
       "Worked with the Australian startup CoreForm as a frontend developer on their Trustmile project, collaborated with a team of backend and other frontend engineers to enhance my skills.",
   },
   {
-    title: "Junior Developer",
+    title: "Full Stack Developer",
     location: "Melbourne, Australia",
     company: "Quad Lock",
     icon: React.createElement(FaReact),
     date: "2024 - present",
     description:
-      "As my first full-time role, started working for the Australian startup Quad Lock as a junior developer to work on their D2C & B2B e-commerce sites built with React & Shopify Liquid.",
+      "Currently, working for the Australian startup Quad Lock as a full stack developer to work on their D2C & B2B custom Shopify themes built with React & Vite.",
   },
 ] as const;
 
